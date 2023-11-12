@@ -4,10 +4,10 @@ import {NextReactP5Wrapper} from "@p5-wrapper/next";
 import {sketch} from "@/features/practice/one/sketch";
 import {useEffect, useState} from "react";
 import {WorkLayout} from "@/components/Layout/WorkLayout";
+import {useLoading} from "@/hooks/useLoading";
 
 export const One = () => {
-  const [isLoading, setIsLoading] = useState(true)
-  const noticeLoaded = () => setIsLoading(false)
+  const {isLoading, noticeLoaded} = useLoading()
 
   const [[w, h], setSize] = useState([0, 0])
   const setCurrentSize = () => setSize([window.innerWidth, window.innerHeight])
