@@ -2,25 +2,14 @@
 // @ts-ignore
 import {NextReactP5Wrapper} from "@p5-wrapper/next";
 import {sketch} from "@/features/practice/1-wave-clock/sketch";
-import {useEffect, useState} from "react";
 import {WorkLayout} from "@/components/Layout/WorkLayout";
 import {useLoading} from "@/hooks/useLoading";
+import {useWindowSize} from "@/hooks/useWindowSize";
 
 export const One = () => {
   const {isLoading, noticeLoaded} = useLoading()
 
-  const [[w, h], setSize] = useState([0, 0])
-  const setCurrentSize = () => setSize([window.innerWidth, window.innerHeight])
-
-  useEffect(setCurrentSize, []);
-
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | undefined
-    window.addEventListener('resize', () => {
-      clearTimeout(timer)
-      timer = setTimeout(setCurrentSize, 200)
-    })
-  }, [])
+  const [w, h] = useWindowSize()
 
   return (
     <WorkLayout
