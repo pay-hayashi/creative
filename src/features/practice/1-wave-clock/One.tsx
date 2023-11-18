@@ -1,7 +1,7 @@
 'use client'
 // @ts-ignore
 import {NextReactP5Wrapper} from "@p5-wrapper/next";
-import {sketch} from "@/features/practice/one/sketch";
+import {sketch} from "@/features/practice/1-wave-clock/sketch";
 import {useEffect, useState} from "react";
 import {WorkLayout} from "@/components/Layout/WorkLayout";
 import {useLoading} from "@/hooks/useLoading";
