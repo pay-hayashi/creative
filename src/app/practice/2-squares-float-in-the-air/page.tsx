@@ -1,5 +1,5 @@
-import {Two} from "@/features/practice/2-squares-float-in-the-air/Two";
+import {SquaresFloatInTheAir} from "@/features/practice/2-squares-float-in-the-air";
 
 export default function TwoPage() {
-    return <Two/>
+    return <SquaresFloatInTheAir/>
 }
