@@ -68,9 +68,9 @@ export class Rectangle implements Shape {
 
 export class RectP5 extends Rectangle {
   p5: P5CanvasInstance
-  color: Parameters<P5CanvasInstance['fill']>
+  color: number[] | string
 
-  constructor(p5: P5CanvasInstance, x1: number, y1: number, x2: number, y2: number, color: Parameters<P5CanvasInstance['fill']> = [240]) {
+  constructor(p5: P5CanvasInstance, x1: number, y1: number, x2: number, y2: number, color: number[] | string = [240]) {
     super(x1, y1, x2, y2)
     this.p5 = p5
     this.color = color
