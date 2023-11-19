@@ -1,8 +1,9 @@
-import {ComponentPropsWithoutRef, ReactNode} from "react";
+import {ReactNode} from "react";
 // @ts-ignore
 import {NextReactP5Wrapper} from "@p5-wrapper/next";
 import {useLoading} from "@/hooks/useLoading";
 import {useWindowSize} from "@/hooks/useWindowSize";
+import {SketchWrapper} from "@/types/sketch";
 
 type WorkLayoutProps = {
   title: string
@@ -29,7 +30,7 @@ export const WorkLayout = ({title, description, children, isLoading}: WorkLayout
 
 export type SketchLayoutProps =
   Omit<WorkLayoutProps, 'children' | 'isLoading'>
-  & ComponentPropsWithoutRef<typeof NextReactP5Wrapper>
+  & { sketch: SketchWrapper }
 export const SketchLayout = ({title, description, sketch}: SketchLayoutProps) => {
   const {isLoading, noticeLoaded} = useLoading()
 

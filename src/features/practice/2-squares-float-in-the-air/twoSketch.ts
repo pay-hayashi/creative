@@ -3,7 +3,7 @@ import {SketchWrapper} from "@/types/sketch"
 import {P5CanvasInstance} from "@p5-wrapper/react"
 import {noiseRangeFactory} from "@/lib/Random";
 
-export const twoSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5: P5CanvasInstance) => {
+export const twoSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
   const noiseRange = noiseRangeFactory(p5)
 
   p5.setup = () => {
