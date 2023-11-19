@@ -1,6 +1,6 @@
 import {SketchWrapper} from "@/types/sketch"
-import {noiseRangeFactory} from "@/lib/Random";
-import {ContinuousDrawer} from "@/lib/ContinuousDrawer";
+import {noiseRangeFactory} from "@/libs/Random";
+import {ContinuousDrawer} from "@/libs/ContinuousDrawer";
 
 export const twoSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
 

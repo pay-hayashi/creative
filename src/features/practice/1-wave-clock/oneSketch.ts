@@ -1,5 +1,5 @@
 import {SketchWrapper} from "@/types/sketch";
-import {noiseRangeFactory} from "@/lib/Random";
+import {noiseRangeFactory} from "@/libs/Random";
 
 export const oneSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
 
