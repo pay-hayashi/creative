@@ -1,6 +1,6 @@
 'use client'
 import {SketchLayout, SketchLayoutProps} from "@/components/Layout";
-import {threeSketch} from "@/features/practice/3/threeSketch";
+import {threeSketch} from "@/features/practice/tiled/threeSketch";
 
 export const Tiled = () => {
   const props: SketchLayoutProps = {

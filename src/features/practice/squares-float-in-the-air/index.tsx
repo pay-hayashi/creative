@@ -1,6 +1,6 @@
 'use client'
 import {SketchLayout, SketchLayoutProps} from "@/components/Layout";
-import {twoSketch} from "@/features/practice/2-squares-float-in-the-air/twoSketch";
+import {twoSketch} from "@/features/practice/squares-float-in-the-air/twoSketch";
 
 export const SquaresFloatInTheAir = () => {
   const props: SketchLayoutProps = {

@@ -1,5 +1,5 @@
 'use client'
-import {oneSketch} from "@/features/practice/1-wave-clock/oneSketch";
+import {oneSketch} from "@/features/practice/wave-clock/oneSketch";
 import {SketchLayout, SketchLayoutProps} from "@/components/Layout";
 
 export const WaveClock = () => {
