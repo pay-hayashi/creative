@@ -1,6 +1,7 @@
 // @ts-ignore
 import {P5CanvasInstance} from "@p5-wrapper/react";
-import {Shape} from "@/shapes/Shape";
+import {Shape, ShapeP5} from "@/shapes/Shape";
+import {P5Color} from "@/shapes/P5Color";
 
 export class Rectangle implements Shape {
   // 左上
@@ -66,22 +67,18 @@ export class Rectangle implements Shape {
   }
 }
 
-export class RectP5 extends Rectangle {
+export class RectP5 extends Rectangle implements ShapeP5{
   p5: P5CanvasInstance
-  color: number[] | string
+  color: P5Color
 
   constructor(p5: P5CanvasInstance, x1: number, y1: number, x2: number, y2: number, color: number[] | string = [240]) {
     super(x1, y1, x2, y2)
     this.p5 = p5
-    this.color = color
+    this.color = new P5Color(p5, color)
   }
 
   draw() {
-    if (this.color instanceof Array) {
-      this.p5.fill(...this.color)
-    } else {
-      this.p5.fill(this.color)
-    }
+    this.color.fill()
     this.p5.rect(this.x1, this.y1, this.w, this.h)
   }
 }

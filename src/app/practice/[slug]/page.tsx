@@ -1,12 +1,14 @@
-import {WaveClock} from "@/features/practice/1-wave-clock";
+import {WaveClock} from "@/features/practice/wave-clock";
 import {ReactNode} from "react";
 import {notFound} from "next/navigation";
-import {SquaresFloatInTheAir} from "@/features/practice/2-squares-float-in-the-air";
+import {SquaresFloatInTheAir} from "@/features/practice/squares-float-in-the-air";
+import {Net} from "@/features/practice/net";
 
 const routes: Record<string, () => ReactNode> = {
   'wave-clock': WaveClock,
   'squares-float-in-the-air': SquaresFloatInTheAir,
   // 'tiled': Tiled,
+  'net': Net,
 } as const
 
 export default function WorkPage({params: {slug}}: { params: { slug: string } }) {
