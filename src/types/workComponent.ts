@@ -1,3 +1,4 @@
-import {ReactNode} from "react";
+import {ElementType} from "react";
 
-export type WorkComponent = (options: { size?: { width: number, height: number }, showInfo?: boolean }) => ReactNode
+type WorkComponentProps = { size?: { width: number, height: number }, showInfo?: boolean }
+export type WorkComponent = ElementType<WorkComponentProps>
