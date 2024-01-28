@@ -7,7 +7,9 @@ export const Home = () => {
         {
           worksList.map(({path, name, Component}) => (
             <div key={path} className='aspect-square transition-transform hover:scale-110'>
-              <Component size={{width: 240, height: 240}} showInfo={false}/>
+              <a href={`/practice/${path}`}>
+                <Component size={{width: 240, height: 240}} showInfo={false}/>
+              </a>
             </div>
           ))
         }
