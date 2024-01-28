@@ -49,17 +49,16 @@ export const threeSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
   }
 
   p5.setup = () => {
-    p5.createCanvas(w, h)
+    const cnv = p5.createCanvas(w, h)
+    cnv.mouseClicked(() => {
+      while (rects.length > 0) {
+        rects.pop()
+      }
+      initRects()
+    })
     p5.fill(245)
     initRects()
     noticeLoaded?.()
-  }
-
-  p5.mouseClicked = () => {
-    while (rects.length > 0) {
-      rects.pop()
-    }
-    initRects()
   }
 
   p5.draw = () => {

@@ -8,7 +8,8 @@ export const twoSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
   const drawer = new ContinuousDrawer(p5)
 
   p5.setup = () => {
-    p5.createCanvas(w, h, p5.WEBGL)
+    const cnv = p5.createCanvas(w, h, p5.WEBGL)
+    cnv.mouseClicked(drawer.reset)
     p5.fill(255, 150)
     p5.frameRate(60)
     noticeLoaded?.()
@@ -34,9 +35,5 @@ export const twoSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
 
     const camPos = [250, 750, 500]
     p5.camera(...camPos, 0, 0, 0, camPos[0], camPos[1], 0)
-  }
-
-  p5.mouseClicked = () => {
-    drawer.reset()
   }
 }

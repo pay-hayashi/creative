@@ -6,16 +6,13 @@ export const oneSketch: SketchWrapper = ({w, h, noticeLoaded}) => (p5) => {
   const noiseRange = noiseRangeFactory(p5)
 
   p5.setup = () => {
-    p5.createCanvas(w, h)
+    const cnv = p5.createCanvas(w, h)
+    cnv.mouseClicked(draw)
     p5.background(255)
     p5.strokeWeight(1)
     p5.smooth()
     draw()
     noticeLoaded?.()
-  }
-
-  p5.mouseClicked = () => {
-    draw()
   }
 
   const draw = () => {
