@@ -1,4 +1,5 @@
 import {worksList} from "@/app/works";
+import Image from "next/image";
 
 export const Home = () => {
   return (
@@ -8,7 +9,7 @@ export const Home = () => {
           worksList.map(({path, name, Component}) => (
             <div key={path} className='aspect-square transition-transform hover:scale-110'>
               <a href={`/practice/${path}`}>
-                <Component size={{width: 240, height: 240}} showInfo={false}/>
+                <Image src={`/practice/${path}.png`} alt={path} width={300} height={300} />
               </a>
             </div>
           ))
